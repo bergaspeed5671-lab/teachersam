@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Extraordinary Hotels Around the World &middot; English Lesson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3F0E7;
+    --paper-2:#EDE9DC;
+    --ink:#1E2A24;
+    --ink-soft:#4B564F;
+    --rule:#C9C2AE;
+    --pine:#2F5D50;
+    --pine-dark:#1F4038;
+    --gold:#C99A2E;
+    --brick:#A23B3B;
+    --white:#FCFBF7;
+    --good:#3F7A4B;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Source Sans 3', sans-serif;font-size:16px;line-height:1.55;}
+  h1,h2,h3{font-family:'Fraunces', serif;font-weight:600;color:var(--ink);margin:0;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+
+  .shell{display:grid;grid-template-columns:220px 1fr;max-width:1180px;margin:0 auto;}
+  @media (max-width:860px){.shell{grid-template-columns:1fr;}}
+
+  .index{position:sticky;top:0;align-self:start;height:100vh;padding:28px 0 28px 8px;border-right:1px solid var(--rule);overflow-y:auto;}
+  @media (max-width:860px){.index{position:static;height:auto;display:flex;overflow-x:auto;border-right:none;border-bottom:1px solid var(--rule);padding:14px 12px;gap:6px;}}
+  .index-brand{font-family:'IBM Plex Mono', monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);padding:0 18px 16px 18px;}
+  @media (max-width:860px){.index-brand{display:none;}}
+  .tab{display:flex;align-items:center;gap:10px;padding:11px 16px 11px 18px;border-left:3px solid transparent;text-decoration:none;color:var(--ink-soft);font-size:14.5px;white-space:nowrap;transition:background .15s ease, color .15s ease, border-color .15s ease;}
+  .tab:hover{background:var(--paper-2);}
+  .tab .num{font-family:'IBM Plex Mono', monospace;font-size:11.5px;color:var(--rule);min-width:18px;}
+  .tab.active{border-left-color:var(--pine);color:var(--pine-dark);background:var(--paper-2);font-weight:600;}
+  .tab.active .num{color:var(--pine);}
+
+  main{padding:0 0 80px 0;}
+  .topbar{position:sticky;top:0;z-index:5;background:rgba(243,240,231,.9);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+  @media (max-width:860px){.topbar{padding:12px 20px;}}
+  .progress-pill{font-family:'IBM Plex Mono', monospace;font-size:12px;color:var(--pine-dark);background:var(--white);border:1px solid var(--rule);border-radius:999px;padding:6px 14px;}
+  .print-btn{font-family:'IBM Plex Mono', monospace;font-size:12px;letter-spacing:.04em;background:var(--pine);color:var(--white);border:none;border-radius:6px;padding:8px 16px;cursor:pointer;}
+  .print-btn:hover{background:var(--pine-dark);}
+
+  section{padding:56px 40px 20px 48px;max-width:820px;border-bottom:1px solid var(--rule);}
+  @media (max-width:860px){section{padding:40px 20px 10px 24px;}}
+  section:last-of-type{border-bottom:none;}
+
+  .cover{padding:64px 48px 40px 48px;max-width:820px;}
+  .cover .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--pine);margin-bottom:14px;}
+  .cover h1{font-size:40px;line-height:1.1;margin-bottom:18px;}
+  @media (max-width:860px){.cover h1{font-size:30px;}}
+  .cover .lede{font-size:17px;color:var(--ink-soft);max-width:60ch;margin-bottom:20px;}
+  .meta-row{display:flex;gap:28px;flex-wrap:wrap;margin-top:10px;}
+  .meta-item{font-size:14px;color:var(--ink-soft);}
+  .meta-item b{color:var(--ink);font-weight:600;}
+
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;}
+  .sec-head .tag{font-family:'IBM Plex Mono', monospace;font-size:13px;color:var(--pine);border:1px solid var(--pine);border-radius:4px;padding:2px 8px;}
+  .sec-head h2{font-size:27px;}
+  .sec-sub{color:var(--ink-soft);font-size:15px;margin:8px 0 30px 0;max-width:65ch;}
+  .sub-head{font-size:16px;margin:34px 0 14px 0;color:var(--pine-dark);}
+
+  .q{margin-bottom:24px;padding-bottom:20px;border-bottom:1px dashed var(--rule);}
+  .q:last-child{border-bottom:none;}
+  .q-num{font-family:'IBM Plex Mono', monospace;color:var(--pine);font-weight:600;margin-right:8px;}
+  .q-prompt{font-size:16px;}
+  .q-type{display:inline-block;font-family:'IBM Plex Mono', monospace;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);background:var(--paper-2);border-radius:3px;padding:2px 7px;margin-left:8px;vertical-align:middle;}
+
+  .ruled{width:100%;border:none;background:repeating-linear-gradient(var(--paper) 0 31px, var(--rule) 31px 32px);background-position:0 8px;font-family:'Source Sans 3', sans-serif;font-size:15.5px;line-height:32px;padding:8px 4px 4px 4px;color:var(--ink);resize:vertical;margin-top:12px;}
+  .ruled:focus{outline:none;}
+  .ruled.short{height:70px;}
+  .ruled.med{height:96px;}
+  .ruled.long{height:128px;}
+
+  .blank-input{border:none;border-bottom:2px dotted var(--ink-soft);background:transparent;font-family:'Source Sans 3', sans-serif;font-size:16px;padding:2px 6px;min-width:150px;color:var(--pine-dark);font-weight:600;}
+  .blank-input:focus{outline:none;border-bottom-color:var(--pine);}
+  .blank-input.is-correct{border-bottom-color:var(--good);color:var(--good);}
+  .blank-input.is-wrong{border-bottom-color:var(--brick);color:var(--brick);}
+
+  .match-select{font-family:'Source Sans 3', sans-serif;font-size:15px;border:1.5px solid var(--rule);border-radius:6px;padding:7px 10px;background:var(--white);color:var(--ink);min-width:230px;}
+  .match-select.is-correct{border-color:var(--good);background:#E4F2E6;color:var(--good);}
+  .match-select.is-wrong{border-color:var(--brick);background:#F6E7E5;color:var(--brick);}
+
+  .choices{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+  .choice{font-family:'Source Sans 3', sans-serif;font-size:15px;background:var(--white);border:1.5px solid var(--rule);border-radius:8px;padding:9px 16px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:border-color .15s ease, background .15s ease;}
+  .choice .letter{font-family:'IBM Plex Mono', monospace;font-size:12px;color:var(--ink-soft);border:1px solid var(--rule);border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;}
+  .choice:hover{border-color:var(--pine);}
+  .choice.selected{border-color:var(--pine);background:#E7EFE9;}
+  .choice.selected .letter{background:var(--pine);border-color:var(--pine);color:var(--white);}
+  .choice.is-correct{border-color:var(--good);background:#E4F2E6;}
+  .choice.is-correct .letter{background:var(--good);border-color:var(--good);color:var(--white);}
+  .choice.is-wrong{border-color:var(--brick);background:#F6E7E5;}
+  .choice.is-wrong .letter{background:var(--brick);border-color:var(--brick);color:var(--white);}
+
+  .check-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;}
+  .check-btn{font-family:'IBM Plex Mono', monospace;font-size:12px;letter-spacing:.03em;background:var(--white);color:var(--pine-dark);border:1.5px solid var(--pine);border-radius:6px;padding:6px 14px;cursor:pointer;}
+  .check-btn:hover{background:#E7EFE9;}
+  .feedback{font-family:'IBM Plex Mono', monospace;font-size:13px;display:none;align-items:center;gap:6px;}
+  .feedback.show{display:inline-flex;}
+  .feedback.correct{color:var(--good);}
+  .feedback.wrong{color:var(--brick);}
+  .feedback .reveal{color:var(--ink-soft);font-family:'Source Sans 3',sans-serif;}
+
+  table.vocab{width:100%;border-collapse:collapse;margin-bottom:18px;font-size:15px;}
+  table.vocab th{text-align:left;font-family:'IBM Plex Mono', monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);border-bottom:1.5px solid var(--ink);padding:8px 10px;}
+  table.vocab td{padding:9px 10px;border-bottom:1px solid var(--rule);}
+  table.vocab tr:last-child td{border-bottom:none;}
+
+  .match-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dashed var(--rule);}
+  .match-row:last-child{border-bottom:none;}
+  .match-word{font-weight:600;min-width:130px;}
+
+  .passage{background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:26px 28px;font-size:15.8px;line-height:1.75;margin-bottom:24px;}
+  .passage h3{font-size:19px;margin-bottom:12px;}
+  .assumption-note{font-family:'IBM Plex Mono', monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);border-radius:6px;padding:8px 12px;margin-bottom:20px;display:inline-block;}
+
+  .ref-box{background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:22px 24px;margin-bottom:22px;}
+  .ref-box h3{font-size:17px;margin-bottom:10px;color:var(--pine-dark);}
+  .ref-box .struct{font-family:'IBM Plex Mono', monospace;font-size:13.5px;background:var(--paper-2);border-radius:6px;padding:8px 12px;margin:8px 0;display:inline-block;}
+  .ref-box ul{margin:8px 0 14px 20px;padding:0;}
+  .ref-box li{margin-bottom:4px;}
+  .ref-box .ex{color:var(--pine-dark);}
+  .signal-tags{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px 0;}
+  .signal-tag{font-family:'IBM Plex Mono', monospace;font-size:12px;background:var(--paper-2);border-radius:4px;padding:4px 9px;color:var(--ink-soft);}
+
+  table.compare{width:100%;border-collapse:collapse;margin-bottom:10px;font-size:14.5px;}
+  table.compare th{text-align:left;font-family:'IBM Plex Mono', monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);border-bottom:1.5px solid var(--ink);padding:8px 10px;}
+  table.compare td{padding:8px 10px;border-bottom:1px solid var(--rule);}
+
+  .option-card{background:var(--white);border:1px solid var(--rule);border-radius:8px;padding:18px 20px;margin-bottom:14px;cursor:pointer;transition:border-color .15s ease, background .15s ease;}
+  .option-card:hover{border-color:var(--pine);}
+  .option-card.selected{border-color:var(--pine);background:#E7EFE9;}
+  .option-card h3{font-size:16px;margin-bottom:6px;}
+  .option-card ul{margin:6px 0 0 20px;padding:0;color:var(--ink-soft);font-size:14.5px;}
+
+  footer{max-width:820px;padding:30px 40px 60px 48px;color:var(--ink-soft);font-size:13px;}
+
+  @media print{
+    .index, .topbar, .check-btn, .feedback{display:none !important;}
+    .shell{display:block;}
+    body{background:#fff;}
+    section{break-inside:avoid-page;page-break-after:always;border-bottom:none;padding:26px 6px;}
+    .cover{padding:20px 6px;}
+    .choice{border:1.2px solid #999;}
+    .choice.selected{background:#eee;}
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <nav class="index" id="index">
+    <div class="index-brand">Hotels&nbsp;Lesson</div>
+    <a class="tab" data-target="cover"><span class="num">00</span>Overview</a>
+    <a class="tab" data-target="warmup"><span class="num">01</span>Warm-up</a>
+    <a class="tab" data-target="vocab"><span class="num">02</span>Vocabulary</a>
+    <a class="tab" data-target="reading"><span class="num">03</span>Reading</a>
+    <a class="tab" data-target="grammar"><span class="num">04</span>Grammar</a>
+    <a class="tab" data-target="speaking"><span class="num">05</span>Speaking</a>
+    <a class="tab" data-target="discussion"><span class="num">06</span>Discussion</a>
+  </nav>
+
+  <main>
+    <div class="topbar">
+      <span class="progress-pill" id="progressPill">0 of 0 answered</span>
+      <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+    </div>
+
+    <section class="cover" id="cover">
+      <div class="eyebrow">English Lesson &middot; Level B1</div>
+      <h1>Extraordinary Hotels<br>Around the World</h1>
+      <p class="lede">A 60-minute lesson on describing places, present simple vs. present continuous, and talking about travel experiences.</p>
+      <div class="meta-row">
+        <div class="meta-item"><b>Student:</b> Alex</div>
+        <div class="meta-item"><b>Level:</b> B1</div>
+        <div class="meta-item"><b>Duration:</b> 60 minutes</div>
+      </div>
+    </section>
+
+    <!-- ============ 1. WARM-UP ============ -->
+    <section id="warmup">
+      <div class="sec-head"><span class="tag">01</span><h2>Warm-up</h2></div>
+      <p class="sec-sub">Let's talk! Answer naturally &mdash; there are no wrong answers here.</p>
+
+      <div class="q"><span class="q-num">1.</span><span class="q-prompt">What is the best hotel you've ever stayed in? What made it special?</span><textarea class="ruled med"></textarea></div>
+      <div class="q"><span class="q-num">2.</span><span class="q-prompt">What do you usually look for when booking a hotel?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">3.</span><span class="q-prompt">Would you rather stay in a luxury hotel or somewhere unusual? Why?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">4.</span><span class="q-prompt">Tell me about your favourite vacation.</span><textarea class="ruled med"></textarea></div>
+      <div class="q"><span class="q-num">5.</span><span class="q-prompt">If you could spend a week anywhere in the world, where would you go?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">6.</span><span class="q-prompt">What kind of place helps you relax the most?</span><textarea class="ruled short"></textarea></div>
+    </section>
+
+    <!-- ============ 2. VOCABULARY ============ -->
+    <section id="vocab">
+      <div class="sec-head"><span class="tag">02</span><h2>Vocabulary &mdash; Describing Places</h2></div>
+      <p class="sec-sub">Adjectives and adverbs for describing places, people, and experiences.</p>
+
+      <h3 class="sub-head">Adjectives</h3>
+      <table class="vocab">
+        <tr><th>Word</th><th>Meaning</th></tr>
+        <tr><td>peaceful</td><td>calm and quiet</td></tr>
+        <tr><td>crowded</td><td>full of people</td></tr>
+        <tr><td>breathtaking</td><td>extremely beautiful</td></tr>
+        <tr><td>spacious</td><td>very large</td></tr>
+        <tr><td>cozy</td><td>warm and comfortable</td></tr>
+        <tr><td>lively</td><td>full of activity</td></tr>
+        <tr><td>isolated</td><td>far away from other places</td></tr>
+        <tr><td>modern</td><td>new in design</td></tr>
+        <tr><td>ancient</td><td>very old</td></tr>
+        <tr><td>spectacular</td><td>impressive and exciting</td></tr>
+      </table>
+
+      <h3 class="sub-head">Adverbs</h3>
+      <table class="vocab">
+        <tr><th>Word</th><th>Meaning</th></tr>
+        <tr><td>peacefully</td><td>in a calm way</td></tr>
+        <tr><td>beautifully</td><td>in a beautiful way</td></tr>
+        <tr><td>comfortably</td><td>in a comfortable way</td></tr>
+        <tr><td>quietly</td><td>with little noise</td></tr>
+        <tr><td>carefully</td><td>with attention</td></tr>
+        <tr><td>incredibly</td><td>extremely</td></tr>
+        <tr><td>surprisingly</td><td>in an unexpected way</td></tr>
+        <tr><td>perfectly</td><td>without mistakes</td></tr>
+      </table>
+
+      <h3 class="sub-head">Exercise 1 &middot; Match the Words with Their Meanings</h3>
+      <p class="sec-sub" style="margin-bottom:16px;">Choose the correct meaning for each word from the dropdown.</p>
+      <div id="matchAdj"></div>
+      <div id="matchAdv" style="margin-top:10px;"></div>
+
+      <h3 class="sub-head">Exercise 2 &middot; Complete the Sentences</h3>
+      <p class="sec-sub" style="margin-bottom:16px;">Use the correct adjective or adverb from the lists above.</p>
+      <div class="q"><span class="q-num">1.</span><span class="q-prompt">The mountain view from our room was absolutely <input type="text" class="blank-input" data-answer="breathtaking">.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">2.</span><span class="q-prompt">Please speak <input type="text" class="blank-input" data-answer="quietly">; the baby is sleeping.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">3.</span><span class="q-prompt">Our cabin was small but very <input type="text" class="blank-input" data-answer="cozy">, with a fireplace and soft blankets.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">4.</span><span class="q-prompt">The night market was noisy and <input type="text" class="blank-input" data-answer="crowded">, with hundreds of visitors.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">5.</span><span class="q-prompt">He answered every question <input type="text" class="blank-input" data-answer="perfectly"> and never made a mistake.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">6.</span><span class="q-prompt">The old town has several <input type="text" class="blank-input" data-answer="ancient"> buildings dating back 500 years.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">7.</span><span class="q-prompt">I was <input type="text" class="blank-input" data-answer="surprisingly"> pleased with how comfortable the beds were.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">8.</span><span class="q-prompt">The lake at sunrise looked completely <input type="text" class="blank-input" data-answer="peaceful">, without a single ripple.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+
+      <h3 class="sub-head">Exercise 3 &middot; Describe These Places</h3>
+      <p class="sec-sub" style="margin-bottom:16px;">Use at least three adjectives in each description.</p>
+      <div class="q"><span class="q-num">1.</span><span class="q-prompt">Your bedroom</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">2.</span><span class="q-prompt">Your office</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">3.</span><span class="q-prompt">Your hometown</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">4.</span><span class="q-prompt">Your favourite caf&eacute;</span><textarea class="ruled short"></textarea></div>
+    </section>
+
+    <!-- ============ 3. READING ============ -->
+    <section id="reading">
+      <div class="sec-head"><span class="tag">03</span><h2>Reading &mdash; The Hotel Above the Clouds</h2></div>
+      <span class="assumption-note">Note: your original passage wasn't included with this prompt, so a matching passage is drafted below &mdash; swap in your own text any time.</span>
+
+      <div class="passage">
+        <h3>The Hotel Above the Clouds</h3>
+        <p>High above a mountain valley in Switzerland, a small hotel called Nimbus Retreat sits nestled among ancient pine forests, reachable only by a cable car that climbs slowly through the clouds. Guests arrive expecting a view, but most are surprised by the silence. Unlike crowded city hotels, Nimbus Retreat has just twelve capsule-shaped rooms, each perched on a wooden platform overlooking the valley below.</p>
+        <p>Every capsule includes a glass ceiling for stargazing, a compact kitchenette, a hot tub, and heated floors, so guests stay cozy even when snow falls outside. In the morning, the clouds often settle beneath the hotel, creating the sensation of floating above the world &mdash; a breathtaking sight that guests describe as unforgettable.</p>
+        <p>There is no spa, no gym, and no nightlife nearby. Instead, guests spend their days hiking quiet trails, reading by the fire, or simply watching the sky change colour. Many visitors say the hotel's greatest luxury is its peaceful silence, something increasingly rare in modern life.</p>
+        <p>Despite its remote location, Nimbus Retreat is fully booked more than a year in advance &mdash; proof that some travellers will go to extraordinary lengths for a night above the clouds.</p>
+      </div>
+
+      <h3 class="sub-head">Comprehension</h3>
+      <div class="q"><span class="q-num">1.</span><span class="q-prompt">Why do people visit this hotel?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">2.</span><span class="q-prompt">How do guests reach the hotel?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">3.</span><span class="q-prompt">What makes the hotel unique?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">4.</span><span class="q-prompt">Why do people enjoy staying there?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">5.</span><span class="q-prompt">What facilities are inside the capsules?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">6.</span><span class="q-prompt">Would you stay there? Why?</span><textarea class="ruled short"></textarea></div>
+
+      <h3 class="sub-head">True or False</h3>
+      <div class="q"><span class="q-num">1.</span><span class="q-prompt">Nimbus Retreat is located in a desert.</span>
+        <div class="choices" data-answer="B"><div class="choice"><span class="letter">A</span>True</div><div class="choice"><span class="letter">B</span>False</div></div></div>
+      <div class="q"><span class="q-num">2.</span><span class="q-prompt">Guests reach the hotel by cable car.</span>
+        <div class="choices" data-answer="A"><div class="choice"><span class="letter">A</span>True</div><div class="choice"><span class="letter">B</span>False</div></div></div>
+      <div class="q"><span class="q-num">3.</span><span class="q-prompt">Each capsule has a glass ceiling for stargazing.</span>
+        <div class="choices" data-answer="A"><div class="choice"><span class="letter">A</span>True</div><div class="choice"><span class="letter">B</span>False</div></div></div>
+      <div class="q"><span class="q-num">4.</span><span class="q-prompt">The hotel has a large nightclub for guests.</span>
+        <div class="choices" data-answer="B"><div class="choice"><span class="letter">A</span>True</div><div class="choice"><span class="letter">B</span>False</div></div></div>
+      <div class="q"><span class="q-num">5.</span><span class="q-prompt">The hotel is often empty because it is hard to reach.</span>
+        <div class="choices" data-answer="B"><div class="choice"><span class="letter">A</span>True</div><div class="choice"><span class="letter">B</span>False</div></div></div>
+
+      <h3 class="sub-head">Vocabulary in Context</h3>
+      <p class="sec-sub" style="margin-bottom:16px;">Find a word in the text that means:</p>
+      <div class="q"><span class="q-num">1.</span><span class="q-prompt">amazing <input type="text" class="blank-input" data-answer="breathtaking"></span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">2.</span><span class="q-prompt">calm <input type="text" class="blank-input" data-answer="peaceful"></span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">3.</span><span class="q-prompt">comfortable <input type="text" class="blank-input" data-answer="cozy"></span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">4.</span><span class="q-prompt">full of people <input type="text" class="blank-input" data-answer="crowded"></span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">5.</span><span class="q-prompt">very old <input type="text" class="blank-input" data-answer="ancient"></span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+    </section>
+
+    <!-- ============ 4. GRAMMAR ============ -->
+    <section id="grammar">
+      <div class="sec-head"><span class="tag">04</span><h2>Grammar &mdash; Present Simple vs. Present Continuous</h2></div>
+
+      <div class="ref-box">
+        <h3>Present Simple</h3>
+        <p>We use the Present Simple for habits, daily routines, facts, things that are generally true, and schedules.</p>
+        <div class="struct">Positive: Subject + verb (+ s/es) &mdash; <span class="ex">I work in an office. She lives in Canada.</span></div><br>
+        <div class="struct">Negative: Subject + do/does not + base verb &mdash; <span class="ex">I don't work on Sundays. He doesn't like coffee.</span></div><br>
+        <div class="struct">Questions: Do/Does + subject + base verb? &mdash; <span class="ex">Do you travel often? Does she work from home?</span></div>
+        <p style="margin-top:14px;">Signal words:</p>
+        <div class="signal-tags">
+          <span class="signal-tag">always</span><span class="signal-tag">usually</span><span class="signal-tag">often</span>
+          <span class="signal-tag">sometimes</span><span class="signal-tag">never</span><span class="signal-tag">every day</span>
+          <span class="signal-tag">every week</span><span class="signal-tag">on Mondays</span>
+        </div>
+      </div>
+
+      <div class="ref-box">
+        <h3>Present Continuous</h3>
+        <p>We use the Present Continuous for something happening now, temporary situations, changes, and future arrangements.</p>
+        <div class="struct">Positive: Subject + am/is/are + verb-ing &mdash; <span class="ex">I am reading. She is working today.</span></div><br>
+        <div class="struct">Negative: Subject + am/is/are not + verb-ing &mdash; <span class="ex">I'm not sleeping. They aren't travelling today.</span></div><br>
+        <div class="struct">Questions: Am/Is/Are + subject + verb-ing? &mdash; <span class="ex">Are you listening? Is he driving?</span></div>
+        <p style="margin-top:14px;">Signal words:</p>
+        <div class="signal-tags">
+          <span class="signal-tag">now</span><span class="signal-tag">right now</span><span class="signal-tag">currently</span>
+          <span class="signal-tag">today</span><span class="signal-tag">this week</span><span class="signal-tag">at the moment</span>
+        </div>
+      </div>
+
+      <div class="ref-box">
+        <h3>Compare</h3>
+        <table class="compare">
+          <tr><th>Present Simple</th><th>Present Continuous</th></tr>
+          <tr><td>I work every day.</td><td>I am working today.</td></tr>
+          <tr><td>She travels every summer.</td><td>She is travelling this week.</td></tr>
+          <tr><td>We visit our parents every weekend.</td><td>We are visiting them this weekend.</td></tr>
+          <tr><td>He drives to work.</td><td>He is driving right now.</td></tr>
+        </table>
+      </div>
+
+      <h3 class="sub-head">Exercise 1 &middot; Choose the Correct Answer</h3>
+      <div class="q"><span class="q-num">1.</span><span class="q-prompt">Alex usually <span class="blank-input" style="display:inline-block;width:auto;min-width:0;">____</span> to work.</span>
+        <div class="choices" data-answer="A"><div class="choice"><span class="letter">A</span>drives</div><div class="choice"><span class="letter">B</span>is driving</div></div></div>
+      <div class="q"><span class="q-num">2.</span><span class="q-prompt">Look! It <span class="blank-input" style="display:inline-block;width:auto;min-width:0;">____</span>.</span>
+        <div class="choices" data-answer="B"><div class="choice"><span class="letter">A</span>rains</div><div class="choice"><span class="letter">B</span>is raining</div></div></div>
+      <div class="q"><span class="q-num">3a.</span><span class="q-prompt">My wife usually <span class="blank-input" style="display:inline-block;width:auto;min-width:0;">____</span> dinner,</span>
+        <div class="choices" data-answer="A"><div class="choice"><span class="letter">A</span>cooks</div><div class="choice"><span class="letter">B</span>is cooking</div></div></div>
+      <div class="q"><span class="q-num">3b.</span><span class="q-prompt">but today I <span class="blank-input" style="display:inline-block;width:auto;min-width:0;">____</span>.</span>
+        <div class="choices" data-answer="B"><div class="choice"><span class="letter">A</span>cook</div><div class="choice"><span class="letter">B</span>am cooking</div></div></div>
+      <div class="q"><span class="q-num">4.</span><span class="q-prompt">They <span class="blank-input" style="display:inline-block;width:auto;min-width:0;">____</span> TV every evening.</span>
+        <div class="choices" data-answer="A"><div class="choice"><span class="letter">A</span>don't watch</div><div class="choice"><span class="letter">B</span>aren't watching</div></div></div>
+      <div class="q"><span class="q-num">5.</span><span class="q-prompt">Listen! Someone <span class="blank-input" style="display:inline-block;width:auto;min-width:0;">____</span> the piano.</span>
+        <div class="choices" data-answer="B"><div class="choice"><span class="letter">A</span>plays</div><div class="choice"><span class="letter">B</span>is playing</div></div></div>
+      <div class="q"><span class="q-num">6.</span><span class="q-prompt">We <span class="blank-input" style="display:inline-block;width:auto;min-width:0;">____</span> to the gym every Wednesday.</span>
+        <div class="choices" data-answer="A"><div class="choice"><span class="letter">A</span>go</div><div class="choice"><span class="letter">B</span>are going</div></div></div>
+      <div class="q"><span class="q-num">7.</span><span class="q-prompt">This month I <span class="blank-input" style="display:inline-block;width:auto;min-width:0;">____</span> on a special project.</span>
+        <div class="choices" data-answer="B"><div class="choice"><span class="letter">A</span>work</div><div class="choice"><span class="letter">B</span>am working</div></div></div>
+      <div class="q"><span class="q-num">8.</span><span class="q-prompt">The Earth <span class="blank-input" style="display:inline-block;width:auto;min-width:0;">____</span> around the Sun.</span>
+        <div class="choices" data-answer="A"><div class="choice"><span class="letter">A</span>moves</div><div class="choice"><span class="letter">B</span>is moving</div></div></div>
+      <div class="q"><span class="q-num">9.</span><span class="q-prompt">Why <span class="blank-input" style="display:inline-block;width:auto;min-width:0;">____</span>?</span>
+        <div class="choices" data-answer="B"><div class="choice"><span class="letter">A</span>do you laugh</div><div class="choice"><span class="letter">B</span>are you laughing</div></div></div>
+      <div class="q"><span class="q-num">10.</span><span class="q-prompt">My parents <span class="blank-input" style="display:inline-block;width:auto;min-width:0;">____</span> in Spain.</span>
+        <div class="choices" data-answer="A"><div class="choice"><span class="letter">A</span>live</div><div class="choice"><span class="letter">B</span>are living</div></div></div>
+
+      <h3 class="sub-head">Exercise 2 &middot; Complete the Sentences</h3>
+      <div class="q"><span class="q-num">1.</span><span class="q-prompt">Sarah usually <input type="text" class="blank-input" data-answer="drinks"> (drink) coffee before work.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">2.</span><span class="q-prompt">Right now she <input type="text" class="blank-input" data-answer="is drinking"> (drink) tea.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">3.</span><span class="q-prompt">We <input type="text" class="blank-input" data-answer="study"> (study) English every Tuesday.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">4.</span><span class="q-prompt">Today we <input type="text" class="blank-input" data-answer="are studying"> (study) grammar.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">5.</span><span class="q-prompt">My brother <input type="text" class="blank-input" data-answer="plays"> (play) football every weekend.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">6.</span><span class="q-prompt">Look! He <input type="text" class="blank-input" data-answer="is playing"> (play) football.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">7.</span><span class="q-prompt">I <input type="text" class="blank-input" data-answer="don't work" style="min-width:110px;"> (not/work) on Saturdays.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">8.</span><span class="q-prompt">I <input type="text" class="blank-input" data-answer="am not working" style="min-width:130px;"> (not/work) today because I'm sick.</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">9.</span><span class="q-prompt">What <input type="text" class="blank-input" data-answer="do" style="min-width:60px;"> you usually <input type="text" class="blank-input" data-answer="do" style="min-width:60px;"> (do) after work?</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">10.</span><span class="q-prompt">What <input type="text" class="blank-input" data-answer="are" style="min-width:60px;"> you <input type="text" class="blank-input" data-answer="doing" style="min-width:60px;"> (do) at the moment?</span>
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+
+      <h3 class="sub-head">Exercise 3 &middot; Correct the Mistakes</h3>
+      <div class="q"><span class="q-num">1.</span><span class="q-prompt">"She is usually drinking coffee before work."</span>
+        <input type="text" class="blank-input" style="width:100%;margin-top:12px;" data-answer="she usually drinks coffee before work" data-reveal="She usually drinks coffee before work.">
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">2.</span><span class="q-prompt">"They play football now."</span>
+        <input type="text" class="blank-input" style="width:100%;margin-top:12px;" data-answer="they are playing football now" data-reveal="They are playing football now.">
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">3.</span><span class="q-prompt">"I am go to the gym every Monday."</span>
+        <input type="text" class="blank-input" style="width:100%;margin-top:12px;" data-answer="i go to the gym every monday" data-reveal="I go to the gym every Monday.">
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">4.</span><span class="q-prompt">"He doesn't working today."</span>
+        <input type="text" class="blank-input" style="width:100%;margin-top:12px;" data-answer="he isn't working today" data-reveal="He isn't working today.">
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">5.</span><span class="q-prompt">"We are usually eating dinner at 7 p.m."</span>
+        <input type="text" class="blank-input" style="width:100%;margin-top:12px;" data-answer="we usually eat dinner at 7 pm" data-reveal="We usually eat dinner at 7 p.m.">
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">6.</span><span class="q-prompt">"Listen! The baby cries."</span>
+        <input type="text" class="blank-input" style="width:100%;margin-top:12px;" data-answer="listen the baby is crying" data-reveal="Listen! The baby is crying.">
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">7.</span><span class="q-prompt">"My parents are living in Canada for many years."</span>
+        <input type="text" class="blank-input" style="width:100%;margin-top:12px;" data-keywords="lived" data-reveal="My parents have lived in Canada for many years.">
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+      <div class="q"><span class="q-num">8.</span><span class="q-prompt">"I read an interesting book right now."</span>
+        <input type="text" class="blank-input" style="width:100%;margin-top:12px;" data-answer="i am reading an interesting book right now" data-reveal="I am reading an interesting book right now.">
+        <div class="check-row"><button class="check-btn" type="button">Check</button><span class="feedback"></span></div></div>
+
+      <h3 class="sub-head">Exercise 4 &middot; Choose the Best Question</h3>
+      <div class="q"><span class="q-num">1.</span><span class="q-prompt">Your friend is carrying a suitcase.</span>
+        <div class="choices" data-answer="B"><div class="choice"><span class="letter">A</span>What do you do?</div><div class="choice"><span class="letter">B</span>What are you doing?</div></div></div>
+      <div class="q"><span class="q-num">2.</span><span class="q-prompt">Your colleague works from home every Friday.</span>
+        <div class="choices" data-answer="A"><div class="choice"><span class="letter">A</span>Do you work from home on Fridays?</div><div class="choice"><span class="letter">B</span>Are you working from home on Fridays?</div></div></div>
+      <div class="q"><span class="q-num">3.</span><span class="q-prompt">You see your friend eating lunch.</span>
+        <div class="choices" data-answer="B"><div class="choice"><span class="letter">A</span>What do you eat?</div><div class="choice"><span class="letter">B</span>What are you eating?</div></div></div>
+      <div class="q"><span class="q-num">4.</span><span class="q-prompt">Your friend loves hiking.</span>
+        <div class="choices" data-answer="A"><div class="choice"><span class="letter">A</span>Do you hike often?</div><div class="choice"><span class="letter">B</span>Are you hiking often?</div></div></div>
+
+      <h3 class="sub-head">Speaking Practice</h3>
+      <p class="sec-sub" style="margin-bottom:16px;">Answer using complete sentences.</p>
+      <div class="q"><span class="q-num">1.</span><span class="q-prompt">What do you usually do after work?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">2.</span><span class="q-prompt">What are you doing differently this week?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">3.</span><span class="q-prompt">What do you usually eat for breakfast?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">4.</span><span class="q-prompt">What are you thinking about right now?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">5.</span><span class="q-prompt">Where do you usually spend your weekends?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">6.</span><span class="q-prompt">Are you learning anything new these days?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">7.</span><span class="q-prompt">What does your best friend usually do after work?</span><textarea class="ruled short"></textarea></div>
+      <div class="q"><span class="q-num">8.</span><span class="q-prompt">Is anything exciting happening in your life at the moment?</span><textarea class="ruled short"></textarea></div>
+    </section>
+
+    <!-- ============ 5. SPEAKING ============ -->
+    <section id="speaking">
+      <div class="sec-head"><span class="tag">05</span><h2>Speaking &mdash; Something You Saw Last Week</h2></div>
+      <p class="sec-sub">Choose ONE topic below, then describe it using today's vocabulary.</p>
+
+      <div class="option-card" data-topic="A">
+        <h3>Option A &middot; A Beautiful Place</h3>
+        <ul><li>Where it was</li><li>What it looked like</li><li>What colours you noticed</li><li>How busy it was</li><li>What people were doing</li><li>How you felt</li></ul>
+      </div>
+      <div class="option-card" data-topic="B">
+        <h3>Option B &middot; A Restaurant or Caf&eacute;</h3>
+        <ul><li>The atmosphere</li><li>The food</li><li>The service</li><li>The people</li><li>The music</li></ul>
+      </div>
+      <div class="option-card" data-topic="C">
+        <h3>Option C &middot; A Park or Street</h3>
+        <ul><li>The weather</li><li>The sounds</li><li>The buildings</li><li>What people were doing</li><li>Something interesting you noticed</li></ul>
+      </div>
+      <div class="option-card" data-topic="D">
+        <h3>Option D &middot; Your Workplace</h3>
+        <ul><li>The office</li><li>Your colleagues</li><li>What happened that day</li><li>How busy it was</li><li>How you felt</li></ul>
+      </div>
+
+      <div class="q" style="margin-top:10px;"><span class="q-prompt">Your answer</span><textarea class="ruled long"></textarea></div>
+    </section>
+
+    <!-- ============ 6. DISCUSSION ============ -->
+    <section id="discussion">
+      <div class="sec-head"><span class="tag">06</span><h2>Discussion</h2></div>
+      <p class="sec-sub">Open discussion &mdash; share your own view.</p>
+
+      <div class="q"><span class="q-num">1.</span><span class="q-prompt">Why do people enjoy unusual experiences?</span><textarea class="ruled med"></textarea></div>
+      <div class="q"><span class="q-num">2.</span><span class="q-prompt">Would you stay in a hotel like the one in the reading? Why or why not?</span><textarea class="ruled med"></textarea></div>
+      <div class="q"><span class="q-num">3.</span><span class="q-prompt">Do you think travelling changes people? In what ways?</span><textarea class="ruled med"></textarea></div>
+      <div class="q"><span class="q-num">4.</span><span class="q-prompt">What makes a place unforgettable?</span><textarea class="ruled med"></textarea></div>
+      <div class="q"><span class="q-num">5.</span><span class="q-prompt">Would you spend more money on comfort or on adventure?</span><textarea class="ruled med"></textarea></div>
+      <div class="q"><span class="q-num">6.</span><span class="q-prompt">If you could design your dream hotel, what would it look like?</span><textarea class="ruled long"></textarea></div>
+    </section>
+
+    <footer>Extraordinary Hotels Around the World &middot; B1 English Lesson &middot; Student: Alex</footer>
+  </main>
+</div>
+
+<script>
+  // ---- Build vocabulary-matching dropdowns ----
+  const adjMeanings = ["calm and quiet","full of people","extremely beautiful","very large","warm and comfortable","full of activity","far away from other places","new in design","very old","impressive and exciting"];
+  const adjWords = [
+    ["peaceful","calm and quiet"],["crowded","full of people"],["breathtaking","extremely beautiful"],
+    ["spacious","very large"],["cozy","warm and comfortable"],["lively","full of activity"],
+    ["isolated","far away from other places"],["modern","new in design"],["ancient","very old"],
+    ["spectacular","impressive and exciting"]
+  ];
+  const advMeanings = ["in a calm way","in a beautiful way","in a comfortable way","with little noise","with attention","extremely","in an unexpected way","without mistakes"];
+  const advWords = [
+    ["peacefully","in a calm way"],["beautifully","in a beautiful way"],["comfortably","in a comfortable way"],
+    ["quietly","with little noise"],["carefully","with attention"],["incredibly","extremely"],
+    ["surprisingly","in an unexpected way"],["perfectly","without mistakes"]
+  ];
+
+  function buildMatchList(container, words, meanings){
+    words.forEach(([word, answer])=>{
+      const row = document.createElement('div');
+      row.className = 'match-row';
+      const label = document.createElement('span');
+      label.className = 'match-word';
+      label.textContent = word;
+      const select = document.createElement('select');
+      select.className = 'match-select';
+      select.dataset.answer = answer;
+      const blank = document.createElement('option');
+      blank.value = ''; blank.textContent = 'Choose a meaning...';
+      select.appendChild(blank);
+      meanings.forEach(m=>{
+        const opt = document.createElement('option');
+        opt.value = m; opt.textContent = m;
+        select.appendChild(opt);
+      });
+      select.addEventListener('change', ()=>{
+        select.classList.remove('is-correct','is-wrong');
+        if(select.value){
+          select.classList.add(select.value === select.dataset.answer ? 'is-correct' : 'is-wrong');
+        }
+        updateProgress();
+      });
+      row.appendChild(label);
+      row.appendChild(select);
+      container.appendChild(row);
+    });
+  }
+  buildMatchList(document.getElementById('matchAdj'), adjWords, adjMeanings);
+  buildMatchList(document.getElementById('matchAdv'), advWords, advMeanings);
+
+  // ---- Multiple-choice selection + correctness check ----
+  document.querySelectorAll('.choices').forEach(group=>{
+    group.addEventListener('click', (e)=>{
+      const choice = e.target.closest('.choice');
+      if(!choice) return;
+      const options = Array.from(group.querySelectorAll('.choice'));
+      options.forEach(c=>c.classList.remove('selected','is-correct','is-wrong'));
+      choice.classList.add('selected');
+      const answerLetter = group.dataset.answer;
+      if(answerLetter){
+        const idx = options.indexOf(choice);
+        const pickedLetter = String.fromCharCode(65+idx);
+        if(pickedLetter === answerLetter){
+          choice.classList.add('is-correct');
+        } else {
+          choice.classList.add('is-wrong');
+          const correctIdx = answerLetter.charCodeAt(0)-65;
+          if(options[correctIdx]) options[correctIdx].classList.add('is-correct');
+        }
+      }
+      updateProgress();
+    });
+  });
+
+  // ---- Speaking option cards (selection only, no correctness) ----
+  document.querySelectorAll('.option-card').forEach(card=>{
+    card.addEventListener('click', ()=>{
+      document.querySelectorAll('.option-card').forEach(c=>c.classList.remove('selected'));
+      card.classList.add('selected');
+    });
+  });
+
+  // ---- Free-text answer checking ----
+  function normalizeAnswer(str){
+    return str.toLowerCase()
+      .replace(/isn't/g,'is not').replace(/aren't/g,'are not')
+      .replace(/doesn't/g,'does not').replace(/don't/g,'do not')
+      .replace(/wasn't/g,'was not').replace(/weren't/g,'were not')
+      .replace(/hasn't/g,'has not').replace(/haven't/g,'have not')
+      .replace(/won't/g,'will not').replace(/can't/g,'cannot')
+      .replace(/shouldn't/g,'should not')
+      .replace(/[.,!?"']/g,'')
+      .replace(/\s+/g,' ')
+      .trim();
+  }
+  function checkBlank(input){
+    const accepted = (input.dataset.answer || '').split('|').map(normalizeAnswer);
+    const given = normalizeAnswer(input.value);
+    const ok = accepted.includes(given) && given.length>0;
+    input.classList.remove('is-correct','is-wrong');
+    input.classList.add(ok ? 'is-correct' : 'is-wrong');
+    return ok;
+  }
+  function checkKeywords(input){
+    const required = (input.dataset.keywords || '').split(',').map(k=>normalizeAnswer(k)).filter(Boolean);
+    const given = normalizeAnswer(input.value);
+    const ok = required.length>0 && required.every(k=>given.includes(k));
+    input.classList.remove('is-correct','is-wrong');
+    input.classList.add(ok ? 'is-correct' : 'is-wrong');
+    return ok;
+  }
+  document.querySelectorAll('.check-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const container = btn.closest('.q');
+      const wrapper = btn.closest('.check-row');
+      const inputs = Array.from(container.querySelectorAll('input.blank-input'));
+      const feedback = wrapper.querySelector('.feedback');
+      let allOk = true;
+      inputs.forEach(input=>{
+        const ok = input.dataset.keywords ? checkKeywords(input) : checkBlank(input);
+        if(!ok) allOk = false;
+      });
+      feedback.classList.remove('correct','wrong');
+      feedback.classList.add('show', allOk ? 'correct' : 'wrong');
+      if(allOk){
+        feedback.innerHTML = '&#10003; Correct!';
+      } else {
+        const answers = inputs.map(i=>i.dataset.reveal || i.dataset.answer || '').filter(Boolean);
+        feedback.innerHTML = '&#10007; Not quite.' + (answers.length ? ' <span class="reveal">Sample answer: '+answers.join(' / ')+'</span>' : '');
+      }
+      updateProgress();
+    });
+  });
+
+  // ---- Scrollspy for side tabs ----
+  const tabs = document.querySelectorAll('.tab');
+  const sections = Array.from(tabs).map(t=>document.getElementById(t.dataset.target)).filter(Boolean);
+  tabs.forEach(t=>t.addEventListener('click', (e)=>{
+    e.preventDefault();
+    document.getElementById(t.dataset.target).scrollIntoView({behavior:'smooth'});
+  }));
+  const spy = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      const tab = document.querySelector(`.tab[data-target="${entry.target.id}"]`);
+      if(!tab) return;
+      if(entry.isIntersecting){
+        tabs.forEach(t=>t.classList.remove('active'));
+        tab.classList.add('active');
+      }
+    });
+  }, {rootMargin:'-20% 0px -70% 0px'});
+  sections.forEach(s=>spy.observe(s));
+
+  // ---- Progress tracker ----
+  function updateProgress(){
+    const fields = document.querySelectorAll('main textarea, main input[type="text"].blank-input');
+    let filled = 0;
+    fields.forEach(f=>{ if(f.value.trim().length>0) filled++; });
+    const choiceGroups = document.querySelectorAll('.choices');
+    let choicesAnswered = 0;
+    choiceGroups.forEach(g=>{ if(g.querySelector('.choice.selected')) choicesAnswered++; });
+    const selects = document.querySelectorAll('.match-select');
+    let selectsAnswered = 0;
+    selects.forEach(s=>{ if(s.value) selectsAnswered++; });
+    const total = fields.length + choiceGroups.length + selects.length;
+    const done = filled + choicesAnswered + selectsAnswered;
+    document.getElementById('progressPill').textContent = `${done} of ${total} answered`;
+  }
+  document.querySelectorAll('main textarea, main input[type="text"].blank-input').forEach(f=>{
+    f.addEventListener('input', updateProgress);
+  });
+  updateProgress();
+</script>
+</body>
+</html>
